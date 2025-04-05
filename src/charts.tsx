@@ -26,9 +26,7 @@ const Charts: React.FC<MyChartProps> = ({
   let content;
 
   function handleHour(dateStr: string) {
-    console.log(dateStr);
     const dateObj = new Date(dateStr);
-    console.log(dateObj);
     return dateObj.toISOString().slice(11, 16);
   }
 
