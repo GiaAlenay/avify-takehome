@@ -21,7 +21,6 @@ const App = () => {
     const fetchGeneration = async () => {
       try {
         const res = await getLast30MinUKGenerationData();
-        console.log(res.data);
         setGenerationDataList(
           res.data.generationmix.sort((a, b) => b.perc - a.perc)
         );
