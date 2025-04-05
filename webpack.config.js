@@ -1,9 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
+const Dotenv = require('dotenv-webpack');
 const host = 'localhost';
-const port = 8080;
+const port = 8081;
 
 module.exports = {
     mode: 'development',
@@ -25,6 +25,7 @@ module.exports = {
     },
     module: {
         rules: [
+            
             {
                 test: /\.([jt])s(x?)$/,
                 exclude: /node_modules/,
@@ -44,6 +45,7 @@ module.exports = {
         ]
     },
     plugins: [
+        new Dotenv(),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: 'index.html'
