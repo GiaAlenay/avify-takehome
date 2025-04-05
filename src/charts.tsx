@@ -101,7 +101,7 @@ const Charts: React.FC<MyChartProps> = ({
           }}
         >
           <Typography variant="h2" gutterBottom>
-            Todays UK energy generation data
+            Today's UK energy generation data
           </Typography>
           <Select
             value={chartOption}
