@@ -48,8 +48,8 @@ module.exports = {
         new Dotenv(),
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: 'index.html'
-        }),
+            template: path.resolve(__dirname, 'public', 'index.html') // Cambié aquí
+          }),
         new MiniCssExtractPlugin({
             filename: '[name]-[contenthash:6].css',
             chunkFilename: '[id].css'
